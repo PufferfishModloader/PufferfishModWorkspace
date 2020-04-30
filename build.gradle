@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+    dependencies {
+        classpath 'com.github.PufferfishModLoader:PufferfishGradle:master-SNAPSHOT'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'dev.cbyrne.pufferfishmodloader.gradle'
+
+group 'dev.cbyrne'
+version '1.0.0'
+
+minecraft {
+    separateVersionJars false
+    target '1.15.2'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    implementation("com.github.PufferfishModLoader:PufferfishModLoader:master-SNAPSHOT")
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.2'
+}
