@@ -32,6 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.PufferfishModLoader:PufferfishModLoader:master-SNAPSHOT")
+    //implementation("com.github.PufferfishModLoader:PufferfishModLoader:master-SNAPSHOT")
+    implementation group: 'com.github.PufferfishModLoader', name: 'PufferfishModLoader', version: 'master-SNAPSHOT'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.2'
 }

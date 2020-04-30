@@ -4,7 +4,7 @@ import dev.cbyrne.pufferfishmodloader.mods.core.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = "mymod")
+@Mod("mymod")
 public class MyMod {
     private static final Logger LOGGER = LogManager.getLogger("MyMod");
 
@@ -12,3 +12,4 @@ public class MyMod {
         LOGGER.info("MyMod started!");
     }
 }
+
