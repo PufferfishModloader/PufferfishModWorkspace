@@ -6,7 +6,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.github.PufferfishModLoader:PufferfishGradle:master-SNAPSHOT'
+        classpath 'com.github.PufferfishModLoader:PufferfishGradle:d6fd9ad'
     }
 }
 
@@ -14,14 +14,16 @@ plugins {
     id 'java'
 }
 
-apply plugin: 'dev.cbyrne.pufferfishmodloader.gradle'
+apply plugin: 'me.dreamhopping.pml.gradle'
 
-group 'dev.cbyrne'
+group 'com.example'
 version '1.0.0'
 
 minecraft {
-    separateVersionJars false
-    target '1.15.2'
+    // Change this to whatever versions you want to build for, for example you can do:
+    // target '1.8.9', '1.15.2', '1.16.4'
+    // if you only want one version:
+    target '1.16.4'
 }
 
 repositories {
@@ -32,6 +34,8 @@ repositories {
 }
 
 dependencies {
-    implementation('com.github.PufferfishModLoader:PufferfishModLoader:master-SNAPSHOT')
+    implementation('com.github.PufferfishModLoader:PufferfishModLoader:1e3c1fe09a')
+    loader('com.github.PufferfishModLoader:PufferfishModLoader:1e3c1fe09a')
+
     implementation('org.apache.logging.log4j:log4j-core:2.13.2')
 }
