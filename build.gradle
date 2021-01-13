@@ -34,8 +34,10 @@ repositories {
 }
 
 dependencies {
-    implementation('com.github.PufferfishModLoader:PufferfishModLoader:1e3c1fe09a')
-    loader('com.github.PufferfishModLoader:PufferfishModLoader:1e3c1fe09a')
+    // use the enhancement/classloader branch
+    loader('com.github.PufferfishModLoader:PufferfishModLoader:003af81b69')
+
+    // TODO: Include PufferfishAPI
 
     implementation('org.apache.logging.log4j:log4j-core:2.13.2')
 }
